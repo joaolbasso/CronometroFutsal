@@ -62,8 +62,8 @@ class CronometroFutsal:
     def enviar_para_vmix(self):
         tempo = self.format_time()
         try:
-            titulo = "TimerTitle"
-            campo_tempo = "Heading"   # Nome do campo no título
+            titulo = "TimerTitle" #INSERIR O NOME EXATO DO CAMPO NAME DO VMIX
+            campo_tempo = "Heading"   # INSERIR O NOME EXATO DO CAMPO NO VMIX
             
             url1 = f"http://localhost:8088/API/?Function=SetText&Input={titulo}&SelectedName={campo_tempo}&Value={tempo}"
             requests.get(url1)
@@ -82,3 +82,4 @@ class CronometroFutsal:
 root = tk.Tk()
 app = CronometroFutsal(root)
 root.mainloop()
+
